@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            overflow: auto;
+
+        }
+
+        .content{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Welcome</h1>
+    <p>Some text</p>
+    <p class="ph1">Some more text</p>
+    
+    <button id="mybutton">Click me</button>
+
+    <input type="text" id="myinput" placeholder="Search here...">
+
+    <div id="mydiv">
+        <div class="content">Scroll inside</div>
+    </div>
+
+    <script>
+        //Select the elements where events can be performed
+        const button = document.querySelector('#mybutton')
+
+        const input = document.querySelector('#myinput')
+
+        const div = document.querySelector('#mydiv')
+
+        //Define the functions or task
+
+        // function to handle keypress- which key is pressed from user in keyboard
+
+        // function handleKeyUp(event){
+        //     console.log('Key Released: '+ event.key);
+
+        // }
+
+        // //ADD EVENT LISTENER
+        // input.addEventListener('keyup',handleKeyUp);
+
+        // function handleKeyPress(){
+        //     console.log('Key Pressed:' + event.key);
+
+        // }
+
+        // input.addEventListener('keypress',handleKeyPress);
+
+        function handle(){
+            alert('Button is clicked')
+        }
+        button.addEventListener('click',handle)
+
+        function handleChange(){
+            console.log('Final Input: ',event.target.value)
+        }
+
+        input.addEventListener('change',handleChange);
+
+
+        function handleMouseOver(){
+            const div = document.querySelector('#mydiv');
+            div.style.backgroundColor = 'red';
+        }
+
+        function handleMouseOut(){
+            const div = document.querySelector('#mydiv');
+            div.style.backgroundColor = 'green';
+        }
+
+        div.addEventListener('mouseover',handleMouseOver)
+        div.addEventListener('mouseout',handleMouseOut)
+
+
+        function handleScroll(){
+            console.log('Scrolled')
+        }
+
+        div.addEventListener('scroll',handleScroll);
+
+
+
+    </script>
+
+</body>
+</html>

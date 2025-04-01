@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch('https://randomuser.me/api') //API link
+
+        //Convert the data fetched into json format
+
+        //resolve -- you were successfully able to fetch
+        .then(response=>response.json()) //Json converts the data into human readable form
+        .then(data=>console.log(data)) //print the output in console
+        
+        //reject --failed to fetch the data
+        .catch(error=> console.log('Error',error));
+    </script>
+    
+</body>
+</html>

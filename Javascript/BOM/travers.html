@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.CHILD TO PARENT -->
+     <!-- SELECT CHILD ELEMENT/TAG FIRST
+     USE.PARENTELEMENT METHOD - HELPS US TO TRAVEL TO MY PARENT -->
+
+    <div id="parent">
+        <p id="child"></p>
+    </div>
+
+    <script>
+        const child = document.getElementById("child");
+        const parent = child.parentElement;
+
+        console.log(parent.id);
+    </script>
+
+    
+</body>
+</html>

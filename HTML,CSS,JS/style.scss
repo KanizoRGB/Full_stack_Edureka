@@ -1,0 +1,17 @@
+$primary:red;
+$secondary:blue;
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+
+    h1{
+        color: $primary;
+        text-align: center;
+    }
+
+    p{
+        color: $secondary;
+    }
+}

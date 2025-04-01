@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //for..in is used to go inside an object to get data
+
+        // std ={
+        //     name:'Gaurav',
+        //     age:23,
+        //     salary:435436,
+        //     city:'Nyc'
+        // }
+
+        // //syntax for (variable in object in name)
+
+        // for (i in std){
+        //     // console.log(`${i}:${std[i]}`)
+        //     console.log(i + ':'+std[i]);
+        // }
+
+        // const order = [
+        //     {id:1,item:"Laptop",quantity:1},
+        //     {id:2,item:"Iphone",quantity:3},
+        //     {id:3,item:"Shoes",quantity:2}
+        // ];
+
+        //array name . forEach individual data
+        // order.forEach(xyz=>{
+        //     console.log(`Order list ${xyz.id} : ${xyz.item} has this quantity ${xyz.quantity}`);
+        // });
+
+        let success = false;
+        let attempt = 0;
+
+        do{
+            attempt ++; //0-1
+            success = Math.random()>0.5;
+            console.log(`Attempt ${attempt} ${success? 'successs':'failed'}`)
+        }while(!success && attempt<4)
+
+        if(!success){
+            console.log('request failed or maximum attempt after 3')
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

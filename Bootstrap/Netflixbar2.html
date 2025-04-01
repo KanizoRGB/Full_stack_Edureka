@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+
+        }
+
+        .navbar{
+            background-color: #141414;
+        }
+
+        .navbar-brand img{
+            height: 40px;
+        }
+
+        .nav-link{
+            color: white;
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover{
+            color: red;
+        }
+
+        .search-input{
+            background-color: transparent;
+            border: 1px solid #ffff;
+            color: #ffff;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="navbar-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" href="#tv-shows">Tv Shows</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" href="#home">Movies</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" href="#home">New & popular</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" href="#home">My List</a>
+                </li>
+
+
+            </ul>
+
+            <form class="d-flex" action="">
+                <input type="text" class="search-input" placeholder="Search">
+            </form>
+        </div>
+
+    </div>
+
+    </nav>
+    
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

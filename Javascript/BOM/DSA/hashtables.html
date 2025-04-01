@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //
+        class HashTables{
+            //constructor
+            constructor(){
+                this.table = new Array(127);
+                this.size = 0
+            }
+
+            //Hash function
+            hash(key){
+                let hash = 0;
+                for(let i=0;i<key.length;i++){
+                    hash=key.charCodeAt(i) //converted into integer
+                }
+
+                return hash % this.table.length;
+
+                //apple -645 % size of array == output index no
+            }
+
+            //Add the data
+            set(key,value){ //key - index no and value 
+
+                const index = this.hash(key);
+
+                this.table[index] = [key,value]
+
+                this.size++;
+
+            }
+
+            //Find the data or value
+            get(key){
+
+                const index = this.hash(key);
+
+                return this.table[index]
+
+            }
+        }
+
+        const mymusicLibrary = new HashTables();
+
+        mymusicLibrary.set("Shape of you","Ed Sheeran")
+        mymusicLibrary.set("Flashing lights","Kanye")
+        mymusicLibrary.set("Mama","2 Pac")
+        mymusicLibrary.set("Ashawo","Davido")
+
+        console.log(mymusicLibrary)
+
+
+        console.log(mymusicLibrary.get("Mama"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Stack{
+            constructor(){
+                this.item=[]
+            }
+
+            //add data to the stack
+            push(element){
+                this.item.push(element)
+            }
+
+            //remove data from the element
+            pop(){
+                if(this.isEmpty()) return "UNDERFLOW";
+
+                return this.item.pop();
+            }
+
+            isEmpty(){
+                return this.item.length==0;
+            }
+
+            //Check the element at the top
+            peek(){
+                if(this.isEmpty()) return "No element found";
+
+                return this.item[this.item.length-1]
+            }
+
+            size(){
+                return this.item.length;
+            }
+        }
+
+        //Object - new classname
+
+        let browserhistory = new Stack();
+
+        browserhistory.push("amazon")
+        browserhistory.push("netflix")
+        browserhistory.push("youtube")
+
+        console.log(browserhistory.pop());
+        console.log(browserhistory);
+        console.log(browserhistory.size());
+
+        
+    </script>
+</body>
+</html>

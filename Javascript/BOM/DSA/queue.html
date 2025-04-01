@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Queue{
+            constructor(){
+                this.item=[];
+            }
+
+            //add the data
+            enqueue(element){
+                this.item.push(element)
+            }
+
+            //remove data from the queue
+            dequeue(){
+                if(this.isEmpty()) return "UNDERFLOW";
+
+                return this.item.shift();
+            }
+
+            isEmpty(){
+                return this.item.length == 0;
+            }
+
+            peek(){
+                if(this.isEmpty()) return "No element found";
+
+                return this.item[this.item.length-1]
+            }
+
+            size(){
+                return this.item.length;
+            }
+
+            front(){
+                if(this.isEmpty()) return "No element found";
+
+                return this.item[0]
+
+            }
+        }
+
+        let customerSupport = new Queue();
+
+        customerSupport.enqueue("Customer 1")
+        customerSupport.enqueue("Customer 2")
+        customerSupport.enqueue("Customer 3")
+
+        console.log(customerSupport.size())
+
+        console.log(customerSupport)
+
+        // console.log(customerSupport.front())
+        // console.log(customerSupport.dequeue())
+    </script>
+    
+</body>
+</html>

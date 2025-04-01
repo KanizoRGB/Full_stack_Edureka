@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function towerOfHanoi(n,src_rod,des_rod,aux_rod){
+
+            if(n==0){
+                return;
+            }
+
+            //Formula or logic
+            //n is the number of discs
+
+            towerOfHanoi(n-1,src_rod,aux_rod,des_rod);
+
+            console.log(`Move ${n} from ${src_rod}---> ${des_rod}`)
+
+            towerOfHanoi(n-1,aux_rod,des_rod,src_rod);
+
+        }
+
+        var n = 3;
+        towerOfHanoi(n,"A","C","B")
+    </script>
+</body>
+</html>

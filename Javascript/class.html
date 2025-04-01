@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //class - keyword book-classname
+
+        class book{
+            constructor(title,author,yearpublished){ //passed parameter as common factor
+
+                //If you want to fetch the value of constructor parameter
+                //this - keyword help us to fetch the value
+
+                this.title= title;
+                this.author = author;
+                this.yearpublished = yearpublished;
+
+            }
+
+            //method() - are used to do some task
+            getSummary(srno){
+                return `${srno} Summary of your book is ${this.title} by ${this.author} published in  year ${this.yearpublished}`
+            }
+        }
+
+        //Object is used to call the method
+        //syntax let,var,const variablename = new classname ("Value of parameter ijn constructor")
+
+        let book1 = new book("Harry potter", "ABC","1987");
+        let book2 = new book("Snow White", "XYZ","1990");
+        let book3 = new book("Rich Dad Poor Dad", "ABC","2000");
+        let book4 = new book("Atomic Habits", "Soniya","2005");
+
+        //Call method
+        //Objectname.methodname()
+
+        console.log(book1.getSummary(1))
+        console.log(book2.getSummary(2))
+        console.log(book3.getSummary(3))
+        console.log(book4.getSummary(4))
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //set -box that stores only unique data
+
+        //syntax - new Set()
+
+        let stickers = new Set(); //Set object created
+
+        //Add the data - method name  - add()
+
+        stickers.add("unicorn");
+        stickers.add("car collection");
+        stickers.add("book sticker");
+        stickers.add("unicorn"); //won't be counted since it is duplicate data
+
+
+        console.log(stickers)
+
+        //remove the data - method name - delete()
+        stickers.delete("unicorn")
+
+        console.log(stickers)
+    </script>
+    
+</body>
+</html>

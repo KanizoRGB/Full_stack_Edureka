@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Quick Sort
+        //1. Choose the Pivot
+        //2. Smaller data<Pivot --left
+        //3. Bigger data>Pivot ---right
+
+
+
+
+        // function quickSort(arr){
+
+        //     if(arr.length<=1){
+        //         return arr;
+        //     }
+
+        //     const pivot= arr[arr.length-1];  //last index
+        //     const left=[];
+        //     const right=[];
+
+        //     for(i=0;i<arr.length-1;i++){
+                
+        //         if(arr[i]<pivot){
+        //             left.push(arr[i]);  //smaller
+        //         }else{
+        //         right.push(arr[i]); // greater
+        //         }
+
+        //     }
+
+        //     return quickSort(left).concat(pivot,quickSort(right))
+
+
+// }
+
+// const unsortedArray=[8,7,92,42,9,55,66,18,4765,22,10,1]
+
+// const sortedArray = quickSort(unsortedArray);
+// console.log(sortedArray)
+
+        function quicksort(arr){
+            if(arr.length<=1){
+                return arr;
+
+            }
+
+            const pivot = arr[arr.length -1]; //last index
+
+            const left = [];
+
+            const right = [];
+
+            for(i=0;i<arr.length-1;i++){
+                if (arr[i]<pivot){
+                    left.push(arr[i]);//smaller
+
+                }
+                else{
+                    right.push(arr[i]); //greater
+                }
+            }
+
+            return quicksort(left).concat(pivot,quicksort(right));
+
+        }
+
+
+
+        const unsortedArray = [8,7,92,42,9,55,66,18,4765,22,10,1]
+
+        console.log(unsortedArray)
+
+        const sortedArray = quicksort(unsortedArray);
+
+        console.log(sortedArray)
+
+    </script>
+</body>
+</html>

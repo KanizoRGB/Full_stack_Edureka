@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Tree
+
+        class treeNode{
+            constructor(data){
+                this.data = data;
+                this.children = []; //empty array
+            }
+
+            addChild(childNode){
+                this.children.push(childNode)
+            }
+        }
+
+        //object
+
+        let grandparent = new treeNode("GP-root Node")
+
+        let parent1 = new treeNode("Parent 1")
+
+        let parent2 = new treeNode("Parent 2")
+
+        let child1 = new treeNode("Child 1")
+
+        let child2 = new treeNode("Child 2")
+
+        grandparent.addChild(parent1)
+        grandparent.addChild(parent2)
+
+        parent1.addChild(child1)
+        parent2.addChild(child2)
+
+        console.log(grandparent)
+
+    </script>
+    
+</body>
+</html>

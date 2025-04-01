@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Global scope --can be accessed Everywhere
+        //local scope --can be accessed inside the function only
+        //block scope -- { // block scope can be accessed inside this bracket only}
+
+        let house = "This is my whole room. I am global"
+
+        function enterBedroom(){
+            let bedroom = "This is my bedroom. I am local"
+
+            if(true){
+                let drawer = "This is a drawer. I am block"
+            }
+        }
+
+        console.log(house);
+        console.log(bedroom);
+        console.log(drawer);
+    </script>
+    
+</body>
+</html>

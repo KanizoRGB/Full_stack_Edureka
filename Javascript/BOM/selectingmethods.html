@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myid">Hello guys</p>
+
+    <p class="myclass">Class selector-0</p>
+    <p class="myclass">Class selector-1</p> 
+
+    <!-- <p>Hello I am the 2nd paragraph</p> -->
+
+    <p>para 0</p>
+    <p>para 1</p>
+
+    <div class="box">First</div>
+    <div class="box">Second</div>
+
+    <script>
+        //Selecting methods
+        //1.Select the element/tag by their ID
+        //method is getElementByID
+
+        // const ele = document.getElementById("myid");
+
+        // console.log(ele.textContent); //textContent show the text in the tag
+
+        //2. Select the element by their classname
+        // const ele1 = document.getElementsByClassName("myclass");
+
+        // console.log(ele1[0].textContent);
+        // console.log(ele1[1].textContent);
+
+        //3.tag name
+        // const ele3 = document.getElementsByTagName("p");
+        // console.log(ele3[0].textContent);
+
+        //4.Query Selector
+        const ele4 = document.querySelector(".box"); //For the first Element
+        console.log(ele4.textContent);
+
+        const ele5 = document.querySelectorAll(".box"); //For all the elements
+        console.log(ele5[1].textContent);
+
+        
+
+    </script>
+</body>
+</html>

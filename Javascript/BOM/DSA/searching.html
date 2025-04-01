@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Searching - Linear Search
+
+        //target == arr[index no]
+        //target === data
+        //return index no
+
+        function sequential(arr,target){
+
+            for(i=0;i<arr.length;i++){
+                if(arr[i]===target){
+                    return i + " target is "+arr[i];
+                }
+                
+            }
+
+            return "Target not found"
+            
+
+        }
+
+        let books=["Math","Fish","Eng","Apple","Physics","Biology","Octopus","Corn"]
+
+        let target = "Fish";
+
+        console.log(sequential(books,target))
+
+
+    </script>
+</body>
+</html>

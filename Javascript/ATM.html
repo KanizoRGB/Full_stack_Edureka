@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Withdraw, checkbalance,deposit --
+
+        class bankaccount{
+
+            constructor(accno,name,balance){
+                this.accno=accno;
+                this.name=name;
+                this.balance=balance;
+
+            }
+
+            //methods
+            deposit(accno,amount){
+                //100 deposit 50
+
+                this.balance += amount;
+
+                console.log(`Hii ${this.name}, ${amount} has been deposited in your account`)
+
+            }
+
+            accbalance(){
+                console.log(`${this.name} your account balance is ${this.balance}`)
+            }
+
+            withdraw(accno,amount){
+
+                if(amount<=this.balance){
+                    this.balance-=amount;
+                }else{
+                    console.log("Sorry Insufficient Balance");
+                }
+
+            }
+
+        }
+
+        let acc1 = new bankaccount(123,"Eugiene",0);
+
+        acc1.accbalance();
+        acc1.withdraw(123,1000);
+        acc1.deposit(123,1000)
+        acc1.accbalance();
+
+    </script>
+    
+</body>
+</html>

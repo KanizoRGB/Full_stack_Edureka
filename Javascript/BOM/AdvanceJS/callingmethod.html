@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3 types to call a function
+        //call(),apply(),bind() - are used to change the value of this (keyword)
+
+        //call
+        let person ={
+            name: 'Alice',
+            greet: function(greeting){
+                console.log(`${greeting}, my name is ${this.name}`)
+
+            }
+        }
+
+        // person.greet("Hello")
+
+
+        let anotherperson = {
+            name:'Bob'
+        }
+
+        //call()
+        person.greet.call(anotherperson,"Hi wassup");
+        //outputs 
+        //Hii wassup, my name is Bob
+
+
+        //apply()
+        person.greet.apply(anotherperson,['hello']); //[value of function parameter]
+
+
+    </script>
+</body>
+</html>

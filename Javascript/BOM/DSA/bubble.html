@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.Bubble Sort
+        //1. Compare first two elements
+        //2. If 1st element is > 2nd then swap it
+        //Repeat the process until it become sorted
+
+        function bubble_sort(arr){
+            //length = no of data
+            let n = arr.length
+
+            let swapped;
+
+            do{
+                swapped= false;
+                for(let i=0;i<n;i++){
+                    if(arr[i]>arr[i+1]){
+                        let temp = arr[i];
+
+                        arr[i]=arr[i+1];
+                        arr[i+1]= temp;
+                        swapped=true;
+                    }
+
+                }
+
+            }while(swapped){ //While condition = true
+
+               return arr; 
+
+            }
+
+        }
+
+        console.log(bubble_sort([10,2,48,3,50,1,9,86,100,34,78,59]))
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Graph{
+            constructor(){
+                this.adjacentLists={}
+            }
+
+            //Add a node(person)
+            addNode(node){
+                if(!this.adjacentLists[node]){
+                    this.adjacentLists[node] = []
+                }
+            }
+
+            //Add an Edge(Friendships)
+            addEdge(node1,node2){
+                this.adjacentLists[node1].push(node2)
+                this.adjacentLists[node2].push(node1)
+            }
+
+            //Remove the friendship
+            removeEdge(node1,node2){
+              this.adjacentLists[node1] = this.adjacentLists[node1].filter(friend => friend!== node2)
+              this.adjacentLists[node2] = this.adjacentLists[node2].filter(friend => friend!== node1)
+            }
+
+            removeNode(node){
+                while(this.adjacentLists[node].length){
+
+                    const adjacentNode = this.adjacentLists[node].pop();
+
+                    this.removeEdge(node,adjacentNode)
+
+                }
+
+                delete this.adjacentLists[node]
+            }
+
+            
+
+        }
+
+        //Social Network
+        const socialNetwork = new Graph();
+
+        socialNetwork.addNode("Alice");
+        socialNetwork.addNode("Bob");
+        socialNetwork.addNode("Charlie");
+
+        socialNetwork.addEdge("Alice","Bob")
+        socialNetwork.addEdge("Alice","Charlie")
+        socialNetwork.addEdge("Bob","Charlie")
+
+        socialNetwork.removeEdge("Alice","Charlie")
+
+        // socialNetwork.removeNode("Bob")
+
+        console.log(socialNetwork.adjacentLists);
+
+    </script>
+</body>
+</html>

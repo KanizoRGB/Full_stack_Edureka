@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="circle" style="height: 50px; width: 50px; background-color: red; border-radius: 50%; position:absolute;"></div>
+
+    <script>
+        const circle = document.getElementById("circle");
+
+        circle.addEventListener("touchstart",()=>{
+            console.log('Touch started');
+        })
+
+        circle.addEventListener('touchmove',(event)=>{
+
+            //touch event
+            const touch = event.touches[0]; //Referst to the no of touch [touch 1 time]
+
+            circle.style.left = touch.PageX-25 + "px";
+            circle.style.top = touch.PageY -25 + "px";
+            console.log("Touch is moving")
+
+
+        })
+
+        circle.addEventListener('touchend',()=>{
+            console.log("touch end")
+        })
+    </script>
+</body>
+</html>

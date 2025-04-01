@@ -1,0 +1,34 @@
+Browser-- chrome,edge,safri,viva
+
+ 
+
+Storage-- to store something
+
+ 
+
+Browser Storage-- data stored inside the different Browser
+
+ 
+
+What type of data of user:
+
+ 
+
+1.cookies-- Temporary data
+
+ 
+
+ 
+
+2.localStoarge-- Act like an permanment Storage
+
+ 
+
+ 
+
+3.Session Storage-- Data active till the session
+
+
+
+
+

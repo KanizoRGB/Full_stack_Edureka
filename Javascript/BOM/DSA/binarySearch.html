@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //BINARY SEARCH - It only works in a sorted array
+        //mid = (0 + lastinded)/2
+        //target > mid search right side
+        //target < mid search left side
+
+        function binarySearch(arr,target){
+
+            let left = 0; //index no of value 0
+
+            let right = arr.length-1; //Last index number
+
+            
+
+            while(left<=right){
+                let mid = Math.floor((left + right)/2) //Index no of mid point
+
+                if(arr[mid]===target){
+                    return mid;
+                }else if(arr[mid]<target){
+                    left=mid+1;
+                }else{
+                    right = mid-1
+                }
+            }
+
+            return "Target not found"
+
+        }
+
+        let sortedArray=["Abc","Elephant","Pqr","xyz"];
+
+        let target = "Elephant";
+
+        let index = binarySearch(sortedArray,target);
+
+        console.log(index);
+    </script>
+</body>
+</html>

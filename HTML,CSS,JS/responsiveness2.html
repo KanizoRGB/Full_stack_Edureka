@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header{
+            background-color: crimson;
+            color: white;
+            padding: 20px;
+        }
+
+        nav ul{
+            list-style: none;
+        }
+
+        nav ul li{
+            display: inline;
+            margin: 10px;
+        }
+
+        footer{
+            background-color: burlywood;
+            color: white;
+            padding: 1em;
+        }
+
+        @media (max-width:600px){
+            nav ul li{
+                display: block;
+                margin: 10px;
+            }
+
+            main{
+                padding: 0.5em;
+                background-color: coral;
+            }
+        }
+
+        @media (min-width:601px) and (max-width:1024px){
+
+            header,footer{
+                padding: 0.5em;
+                background-color: lightseagreen;
+            }
+
+            main{
+                padding: 1em;
+                background-color:rgb(216, 255, 253);
+            }
+        }
+
+        @media (min-width:1025px){
+            header,footer{
+                padding: 0.5em;
+            }
+
+            main{
+                max-width: 800px;
+                background-color: brown;
+                color: white;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My personal page</h1>
+        <nav>
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Welcome to my blog</h2>
+            <p>This is a sample Blog! resize your browser window to 
+                responsive design
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My personal Blog</p>
+    </footer>
+</body>
+</html>

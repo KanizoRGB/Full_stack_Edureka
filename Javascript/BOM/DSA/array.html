@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //To do list
+        let tasks = []; //No task added
+
+        tasks=["buy groceries","work out","office","Homework","cleaning"]
+
+        //Array method
+        //Add the data at the end
+        tasks.push("Cook");
+        // console.log(tasks)
+
+        //add the data at the start
+        tasks.unshift("running");
+
+        //remove data from -end
+        tasks.pop()
+
+        //Remove data from the front
+        tasks.shift()
+
+        //Slicing the array
+        let firstTwotasks = tasks.slice(0,3)
+
+        console.log(tasks)
+
+        //Splice means to add data in the middle of the array
+
+        tasks.splice(3,0,"New Task")
+
+
+
+        // console.log(firstTwotasks)
+
+
+    </script>
+</body>
+</html>

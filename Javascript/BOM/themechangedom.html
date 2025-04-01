@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: coral;
+            margin: 0;
+        }
+
+        button{
+            border-radius: 3px;
+            border: 1px solid coral;
+            height: 50px;
+            margin: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Click A button to change the theme</h1>
+    <button id="redbutton" >Red Theme</button>
+    <button id="bluebutton" >Blue Theme</button>
+    <button id="greenbutton">Green Theme</button>
+
+    <h1>Image below</h1>
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPcAAACuCAIAAAC7WQUOAAAG9ElEQVR42u2csW7DMAxFXQuJF1HJ9f/+SH9Vua3Bank0oYYtRNOFGuSTqabAfz5aIvCtbO7ubTbnXa1fPvr951ysBlrBSo3mDUdq6XnKr2my7/Rg0OGJpbFKEqaalExV8v2EUifi1JKKpoZreaGmvs5e6RKSh8PWmvVZV13Bewppr6q2+l24LWjGACUVt5onMxKFS2fnAWnxZDQDbp/+YBZ8WQ0A26f/lGXtZzFkkxQKY42JyBJVTxFW8yQVLwlV3hmJ4bHeLnBqBXnT7MlqcU0229hKa6SA0JVU8RZfbo/lIP1X6jplfimV/eCH4F/ReQNIByYNXUDych9jz3SZU0VV9bzIenCB1uUmsaQo54r7WD4FGdUaFxUrKeyeQsHoL7nLcdkYcjgCy++REnCw4cRjJtnC1mf5alRA863EyLv6FEKRj6YJ9sutx5GfXsSDkJY6sCWBdoCWJWuoJPJNGqu+n7sJwfGJpGAVMLnWw7MO5J1LIECV9n+0zol9h8RhMBeFXbQ3JhE1nETZ2T6jGKJcFX6C2ULnCw4cRjJtsRrJ3sZOK0ofiF4lIXp4ezblkCZpzZ1Oo3WM05KvER1erlU5GKp2CW57fyjw1ennlVPmVb1YlNe65MKFEV/ZmenyDr7LpNWtwVRVa3IVToce/CJFXaZESe4q9yM8R2CMb6qQXZyKVhE2dhPqIilwEXqTDz88yBWqibIHHJ6VU/Zoa+KDC/FPNHyciq0tS54IxIzM9movmS1VW7iP1IKpFKiFvmxjDRRBU15VMEdRnyMiR+yKRWX9KSsFfTISjlJJNgn7pjqhmRqgTLI6+Y2rWEnA2upYGcwQ5d6O2Kcl0BOhq6Pzdycpo7NEHvRRii54VJTK8iPj2qvw0NTARWjUdUsObS5TuRMmdl+SPGqBFmNuRs2kucZZzO3cIjIxL7yiS7tSPNJ6bVcvEsPJIKu7eHQJnuOVTqa4pD4imTRcScMJotwvbuFjyTOb7jqrWErTJ4z6QKrkiJuTammeditialNTqGZDWFydSfyGV+Ysnzqzg+0vW526lHWqp2rSRoVtI5ZJOVzLKKriyoamWbrzBKXiHdZ/Qw94WhpM9BW7artN7vHzNlEDRw3BO5pmaqGD5IT2s4zzdktNpY1J4cNvWmYerKj58DRK65RWIFmH6pN4uKod75LoR+uJMnk0761MQSWlTUnJfZZ3rATDZSFpaVrGGyHVWKUJfErepdHvVYsJzY2xV6tIbFmGioQioUVk9UJdFVENXLZIbJWOiNbOkRgOQgfFR4RK4TxytO1VgBwUEiMlcqiQrGJEklvJHRSXEkVWiaLjhozE4JHmKdaKnCqOlZSZBMWWIVeH1zVKHF+rE95pElFiSnbKA5Sw70ZDOcYyVQQRDT4VSeIXEtctKT5XkV91NePqzdKakWJpRVdUXswzD97suO0eQFnoiuyuJQVtu1Fo65mO3xKRoV7DvFKJRT7hnpucU+Ut8AfTF/13tCBRbe/qJG8UBnei15cSYynE9hLWnNMGtoP4snhJvHSVBrnpGJL8RQyOY4c1gYilVUpGWh5/LPGhLLW7UTp3ghcn5dnYfF4mB8Q09l/tlp8tj5FLSsanwpsVpvPdSB9Vl/3P62VeA5/jTinHzMZ7D3M6MG2nlTUtIiNyKphiYKw8aUpL8LF7IJqTifk2f++R8kqN/VeES8eRTlFWbRZkCb59XxE6K2jbdoZ5L6nI6lJ4rOBkqtUjD1SdUIzjL5lxQBnPbQmkLkEBh+yXeYUmkvO7nQWwrT6Q7lqe8Uvbl27766y8HsntYf2k+Iv9QhVNB8lPoOExc+cQXnBX8P/AoUA3b8L6oQLsAAAAASUVORK5CYII=" alt="base64image">
+    <marquee style="background-color: white ; padding: 20px;">OFFER 30% OFF ONE ON ONE SESSION</marquee>
+
+    <script>
+        //Select a button from body
+
+        const redbutton = document.getElementById("redbutton")
+        const bluebutton = document.getElementById("bluebutton")
+        const greenbutton = document.getElementById("greenbutton")
+
+        //EVENT -Action[user performs the action ]
+
+        redbutton.addEventListener("click",function(){
+            document.body.style.backgroundColor = "red";
+        })
+        bluebutton.addEventListener("click",function(){
+            document.body.style.backgroundColor = "blue";
+        })
+        greenbutton.addEventListener("click",function(){
+            document.body.style.backgroundColor = "green";
+        })
+    </script>
+
+    
+</body>
+</html>
