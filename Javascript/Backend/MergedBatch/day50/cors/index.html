@@ -7,6 +7,7 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
         }
         form{
             text-align: center;
@@ -14,13 +15,14 @@
             color: white;
             margin: 10px;
             padding: 15px;
+            border-radius: 2px;
         }
     </style>
 </head>
 <body>
     <h1>Login Form</h1>
     <form id="loginForm">
-        Name: <input type="text" id="email" placeholder="Enter your Name" required> <br><br>
+        Name: <input type="text" id="name" placeholder="Enter your Name" required> <br><br>
         Email: <input type="email" id="email" placeholder="Enter your Email" required> <br> <br>
         <button type="submit">Submit</button>
     </form>
@@ -35,7 +37,7 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
 
-            fetch('http://localhost:3300',{
+            fetch('http://localhost:3300/login',{
                 
                 method:'POST',
                 headers:{

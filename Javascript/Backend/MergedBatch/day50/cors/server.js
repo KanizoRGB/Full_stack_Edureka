@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.post('/login',(req,res)=>{
 
-    const {name,email} = req.body
+    const {name,email} = req.body;
 
     //simple validation
     if(name && email){
