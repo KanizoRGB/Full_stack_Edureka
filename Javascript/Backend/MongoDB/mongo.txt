@@ -1,0 +1,27 @@
+MongoDB Server - the command is mongod
+
+MongoDB SHELL -- tool which connect to our server -- the command is mongosh
+
+MONGODB COMPASS - Application which helps us to use mongodb database in a very easy way
+
+SQL --
+1.It is like a programming language
+2.Relational Database(connection)
+3.Data stored in table format- i.e rows
+
+database commands are known as query
+
+NoSQL 
+-- 
+1.it is not like a programming language
+2. Non relational database
+3.JSON format{
+    "name":"value"
+}
+4.Any kind of data - images,videos,text,number,audio,excel,email
+
+
+1.Steps to start up MondoDB server
+
+*Start the MongoDB - mongod open cmd from address?
+

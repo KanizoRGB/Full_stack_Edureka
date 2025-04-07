@@ -1,0 +1,18 @@
+MongoDB Shell- Use commands/Query
+1. use <databasename> --to create a database
+2. You need to have a collection
+db.Collectionname
+
+db.Collectionname.insertOne({key:"value"})
+db.Collectionname.insertMany({objectOne},{objectTwo})
+db.Collectionname.find() to see the data in your db
+db.Collectionname.UpdateOne({key:"value"},{$set:{key:"Newvalue"}}) To update a value in your collection
+
+db.Collectionname.drop() to delete your whole collection
+
+db.Dropdatabase() for deleting the whole database
+
+Types of Database in MongoDB
+MongoDb local Instance database -- The local database which we have in our system
+
+MongoDb cloud instance database
