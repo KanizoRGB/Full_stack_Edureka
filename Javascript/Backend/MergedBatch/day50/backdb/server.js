@@ -51,7 +51,7 @@ app.put("/tasks/:id", async(req,res)=>{
 //To delete data
 app.delete("/tasks/:id", async(req,res)=>{
 
-    await Task.findByIdAndDelete(req.params.id,{completed:true})
+    await Task.findByIdAndDelete(req.params.id)
 
     res.json({message:"Task Deleted"});
 

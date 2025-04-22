@@ -1,0 +1,7 @@
+1.useState() -- Store the data/Variable -dynamic
+
+2.useEffect() -- To fetch data from an API
+
+3.useContext() -- It is used to pass the data or component directly
+We use it to pass data or function or any value to any component without manually passing in each component
+
